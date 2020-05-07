@@ -187,7 +187,7 @@ const openGoods = (event) => {
 			containerPromo.classList.add('hide');
 			restaurants.classList.add('hide');
 			menu.classList.remove('hide');
-			getData(`../db/${restaurant.dataset.products}`)
+			getData(`./db/${restaurant.dataset.products}`)
 			.then((data) => {
 				data.forEach(createCardGood)
 			});
@@ -208,7 +208,7 @@ logo.addEventListener('click', () => {
 });
 
 function init() {
-	getData('../db/partners.json')
+	getData('./db/partners.json')
 	.then((data) => {
 		data.forEach(createCardRestaurants)
 	});
